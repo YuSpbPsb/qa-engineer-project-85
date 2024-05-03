@@ -32,3 +32,60 @@
   expected-result: |
     Пользователь должен получить сообщение об ошибке
 #примеры
+- summary: |
+    Возможность создание игры без регистрации
+  requirement: |
+    Пользователь должен иметь возможность создавать игры без регистрации
+  prerequisites: |
+    no data
+  test-data: |
+    no data
+  steps:
+    - Нажимаем кнопку "TRY SIMPLE BATTLE"    
+  expected-result: |
+    Пользователь должен попасть на случайную подготовленную игру с ботом.
+#
+- summary: |
+    Проверка регистрации пользователя 
+  requirement: |
+    Пользователь должен иметь возможность зарегестрироваться
+  prerequisites:
+    no data
+  test-data: |
+    Email = codebatt_test_1234@tutamail.com;  Password = n3$TaGM4G8Se!)@;
+  steps:
+    - Нажимаем кнопку "Sing in"
+    - Вводим пароль и email
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователь попадает на главную страницу
+#
+- summary: |
+     Проверка регистрации по email
+  requirement: |
+    Пользователь должен иметь возможность зарегестрироваться
+  prerequisites:
+    no data
+  test-data: |
+    Nickname = test_user1234; Email = берём с сайта: https://temp-mail.org;  Password = n3$TaGM4G8Se!)@; Password Confirmation = n3$TaGM4G8Se!)@
+  steps:
+    - Нажимаем кнопку "Sing up"
+    - Вводим Nickname; Email; Password; Password Confirmation 
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователь попадает на главную страницу
+#
+- summary: |
+    Проверка авторизации по аккаунту в Github
+  requirement: |
+    Пользователь должен иметь возможность авторизоваться
+  prerequisites: | 
+    
+  test-data: |
+    Nickname = test_user1234; Email = берём с сайта: https://temp-mail.org например, kibiwil559@deligy.com;  Password = n3$TaGM4G8Se!)@; Password Confirmation = n3$TaGM4G8Se!)@
+  steps:
+    - Нажимаем кнопку "Sing up"
+    - Вводим Nickname; Email; Password; Password Confirmation 
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователь попадает на главную страницу
