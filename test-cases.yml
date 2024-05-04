@@ -80,12 +80,27 @@
   requirement: |
     Пользователь должен иметь возможность авторизоваться
   prerequisites: | 
-    
+    На устройстве/в браузере есть авторизованный аккаунт Github
   test-data: |
-    Nickname = test_user1234; Email = берём с сайта: https://temp-mail.org например, kibiwil559@deligy.com;  Password = n3$TaGM4G8Se!)@; Password Confirmation = n3$TaGM4G8Se!)@
+    no data
   steps:
-    - Нажимаем кнопку "Sing up"
-    - Вводим Nickname; Email; Password; Password Confirmation 
-    - Нажимаем кнопку «Submit»
+    - Нажимаем кнопку "Sing in"
+    - Нажимаем кнопку "Sing in with Github"
+    - В окне подтверждения нажимаем кнопку "Авторизоваться"        
+  expected-result: |
+    Пользователь попадает на главную страницу
+#
+- summary: |
+    Проверка авторизации по аккаунту в Discord
+  requirement: |
+    Пользователь должен иметь возможность авторизоваться
+  prerequisites: | 
+    На устройстве/в браузере есть авторизованный аккаунт Discord
+  test-data: |
+    no data
+  steps:
+    - Нажимаем кнопку "Sing in"
+    - Нажимаем кнопку "Sing in with Discord"
+    - В окне подтверждения нажимаем кнопку "Авторизоваться"   
   expected-result: |
     Пользователь попадает на главную страницу
