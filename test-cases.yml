@@ -104,3 +104,24 @@
     - В окне подтверждения нажимаем кнопку "Авторизоваться"   
   expected-result: |
     Пользователь попадает на главную страницу
+#
+- summary: |
+    
+  requirement: |
+    Пользователь должен иметь возможность создавать игры
+  prerequisites: | 
+    Пользователь авторизован
+  test-data: |
+    Код: qa-engineer-project-85\assets\game_with_bot_1.md
+  steps:
+    - Нажимаем кнопку "CREATE A GAME"
+    - Выбираем Level - 1
+    - Выбираем Game Type - With a bot
+    - Выбираем Time control - 10 min
+    - Выбираем Chose task by name or tags - react_area
+    - Нажимаем кнопку "Create battle"
+    - Выбираем язык - Node.js
+    - Встввляем подготовленный код в редактор
+    - Нажимаем "Run"
+  expected-result: |
+    Игра с ботом запускается
