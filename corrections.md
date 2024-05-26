@@ -6,7 +6,7 @@ test-cases.yml
 
 https://github.com/YuSpbPsb/qa-engineer-project-85/blob/65a5a666d9ada29265fcede887d4f50c9288213b/test-cases.yml#L14 - обсудили выше поправить
 2
-#?
+#+
 https://github.com/YuSpbPsb/qa-engineer-project-85/blob/65a5a666d9ada29265fcede887d4f50c9288213b/test-cases.yml#L22 - нам не нужно указывать такие данные при регистрации ведь после первой попытки они станут не валидны Да и доступов к почте нет - зачем они нам?) Удаляем
 #+
 https://github.com/YuSpbPsb/qa-engineer-project-85/blob/65a5a666d9ada29265fcede887d4f50c9288213b/test-cases.yml#L32 - то что зер переходит на главную страницу не означает что регистрация прошла успешно)
@@ -38,5 +38,5 @@ https://github.com/YuSpbPsb/qa-engineer-project-85/blob/65a5a666d9ada29265fcede8
 
 https://github.com/YuSpbPsb/qa-engineer-project-85/blob/65a5a666d9ada29265fcede887d4f50c9288213b/test-cases.yml#L236 - тоже самое про параметры
 testing-report.yml
-
+#+
 Актуализировать и изменить в соотвествии с изменениями и указаниями выше. 
