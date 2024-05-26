@@ -11,7 +11,7 @@
   steps:
     - Нажимаем кнопку "TRY SIMPLE BATTLE"    
   expected-result: |
-    Пользователь должен попасть на случайную подготовленную игру с ботом.
+    Игра без регистрации успешно создана.
 #
 - summary: |
      Регистрация по email
@@ -20,16 +20,13 @@
   prerequisites:
     no data
   test-data: |
-    Nickname = test_user12348
-    Email = берём с сайта: https://temp-mail.org
-    Password = n3$TaGM4G8Se!)@
-    Password Confirmation = n3$TaGM4G8Se!)@
+    no data
   steps:
     - Нажимаем кнопку "Sing up"
     - Вводим Nickname; Email; Password; Password Confirmation; 
     - Нажимаем кнопку «Submit»
   expected-result: |
-    Пользователь попадает на главную страницу
+    Пользователь успешно зарегистрирован
 #
 - summary: |
     Авторизации пользователя по email
@@ -44,22 +41,7 @@
     - Вводим пароль и email
     - Нажимаем кнопку «Submit»
   expected-result: |
-    Пользователь попадает на главную страницу
-#
-- summary: |
-    Авторизации пользователя по email
-  requirement: |
-    Пользователь должен иметь возможность авторизоваться
-  prerequisites:
-    no data
-  test-data: |
-    Email = codebatt_test_1234@tutamail.com Password = n3$TaGM4G8Se!)@
-  steps:
-    - Нажимаем кнопку "Sing in"
-    - Вводим пароль и email
-    - Нажимаем кнопку «Submit»
-  expected-result: |
-    Пользователь попадает на главную страницу
+    Пользователь успешно авторизован
 #
 - summary: |
     Восстановление пароля по email
@@ -109,7 +91,7 @@
     - Нажимаем кнопку "Sing in with Github"
     - В окне подтверждения нажимаем кнопку "Авторизоваться"        
   expected-result: |
-    Пользователь попадает на главную страницу
+    Пользователь успешно авторизован
 #
 - summary: |
     Проверка авторизации по аккаунту в Discord
@@ -124,7 +106,7 @@
     - Нажимаем кнопку "Sing in with Discord"
     - В окне подтверждения нажимаем кнопку "Авторизоваться"   
   expected-result: |
-    Пользователь попадает на главную страницу 
+    Пользователь успешно авторизован
 #
 - summary: |
     Проверка создания игры с ботом
@@ -136,13 +118,10 @@
     no data
   steps:
     - Нажимаем кнопку "CREATE A GAME"
-    - Выбираем Level - 1
-    - Выбираем Game Type - With a bot
-    - Выбираем Time control - 10 min
-    - Выбираем Chose task by name or tags - random task
+    - Выбираем игру с ботом, оставляя остальные условия по умолчанию.
     - Нажимаем кнопку "Create battle"    
   expected-result: |
-    Игра с ботом запускается
+    Игра с ботом успешно создана
 #
 - summary: |
     Проверка создания игры с друзьями
@@ -213,17 +192,16 @@
   test-data: |
     Код: qa-engineer-project-85\assets\game_with_bot_1.md
   steps:
-    - Нажимаем кнопку "CREATE A GAME"
-    - Выбираем Level - 1
-    - Выбираем Game Type - With a bot
-    - Выбираем Time control - 10 min
+    - Нажимаем кнопку "CREATE A GAME"  
+    - Выбираем Game Type - With a bot    
     - Выбираем Chose task by name or tags - react_area
+    - Остальные параметры оставляем по умолчанию
     - Нажимаем кнопку "Create battle"
     - Выбираем язык - Node.js
     - Встввляем подготовленный код в редактор
     - Нажимаем "Run"
   expected-result: |
-    Игра с ботом запускается, пользователь побеждает
+    Игра с ботом успешно создана, пользователь побеждает
 #
 - summary: |
     Проверка возможности сдаться в игре
@@ -234,16 +212,14 @@
   test-data: |
     no data
   steps:
-    - Нажимаем кнопку "CREATE A GAME"
-    - Выбираем Level - 4
+    - Нажимаем кнопку "CREATE A GAME"   
     - Выбираем Game Type - With a bot
-    - Выбираем Time control - 3 min
-    - Выбираем Chose task by name or tags - react_area
+    - Остальные параметры оставляем по умолчанию
     - Нажимаем кнопку "Create battle"
     - Нажимаем кнопку "Give Up"/ красный флаг
-    -  Нажимаем кнопку "Give Up" в окне подтверждения
+    - Нажимаем кнопку "Give Up" в окне подтверждения
   expected-result: |
-    Игра с ботом запускается, пользователь сдается и пороигрывает
+    Игра с ботом успешно создана, пользователь сдается и пороигрывает
 #
 - summary: |
     Проверка выбора языка программирования в активной игре
